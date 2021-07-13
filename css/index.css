@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.course_item{
+    width: 556px;
+    height: 287px;
+    background-image: url(../images/course_icon.png);
+    background-size: 100% 100%;
+    position: relative;
+    perspective: 300px;
+    -webkit-perspective: 500;
+    display: block;
+    cursor: pointer;
+	margin: 200px auto 0;
+}
+.course_item_name{
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+}
+.course_item_modal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: rotateY(0deg);
+    transform-origin: left;
+    display: none;
+}
+.course_item_inner{
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding-left: 40px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.course_item_modal h4{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 38px;
+}
+.course_item_modal.active{
+    display: block;
+    transform-origin: left;
+    animation: animate 1.5s;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards; /* Safari 和 Chrome */
+}
+@keyframes animate {
+    to {
+      transform: rotateY(5deg);
+    }
+}
